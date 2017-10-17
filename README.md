@@ -6,9 +6,9 @@ First make a div for the library to bind everything to. Give it an id of `drawer
 
 ```
 <html>
-	<body>
-		<div id="drawer-holder"></div>
-	</body>
+  <body>
+    <div id="drawer-holder"></div>
+  </body>
 </html>
 ```
 
@@ -16,10 +16,10 @@ Then link `drawer.css` and `drawer.js` to your HTML file:
 
 ```
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="drawer-library/drawer.css">
-		<script type="text/javascript" src="drawer-library/drawer.js"></script>
-	</head>
+  <head>
+    <link rel="stylesheet" type="text/css" href="drawer-library/drawer.css">
+    <script type="text/javascript" src="drawer-library/drawer.js"></script>
+  </head>
 </html>
 ```
 #### Note: Make sure to add `drawer.js` above your custom JavaScript.
@@ -31,25 +31,25 @@ Finally, call the drawer library:
 //Content is your list title, href is where it points to
 
 var listItems = [{
-	content: 'list title',
-	href: 'yoursite.com'
+  content: 'list title',
+  href: 'yoursite.com'
 },
 {
-	content: 'second list title',
-	href: 'secondsite.com'
+  content: 'second list title',
+  href: 'secondsite.com'
 }]
 
 
 //Generate the drawer with your settings
 
 new Drawer()
-	.setWidth(300)
-	.addListItems(listItems)
-	.setFontSize(18)
-	.setListItemColor('red')
-	.setDrawerBackgroundColor('white')
-	.setHamMenuBackgroundColor('white')
-	.setHamMenuBackgroundColorActive('red')
+  .setWidth(300)
+  .addListItems(listItems)
+  .setFontSize(18)
+  .setListItemColor('red')
+  .setDrawerBackgroundColor('white')
+  .setHamMenuBackgroundColor('white')
+  .setHamMenuBackgroundColorActive('red')
 ```
 
 ##Author and License
