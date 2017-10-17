@@ -52,7 +52,7 @@ new Drawer()
   .setHamMenuBackgroundColorActive('red')
 ```
 
-##Author and License
+## Author and License
 Built by [mdt2](https://github.com/mdt2)
 
 ```
