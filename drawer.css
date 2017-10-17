@@ -1,0 +1,103 @@
+/* General */
+
+:root {
+  --ham-background-color: white;
+  --ham-background-color-hover: red;
+  --anchor-text-color: red;
+  --drawer-width: 300px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E7764C;
+}
+
+/* Hamburger menu */
+
+#icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 82px;
+  height: 72px;
+  cursor: pointer;
+}
+
+
+.hamburger {
+  top:32px;
+  left:16px;
+  width: 50px;
+  height: 6px;
+  background-color: var(--ham-background-color);
+  position: absolute;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+  transition: 0.3s;
+}
+
+.hamburger:before {
+  top: -16px;
+}
+
+.hamburger:after {
+  top: 16px;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  position:absolute;
+  width: 50px;
+  height: 6px;
+  background-color: var(--ham-background-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition:0.3s;
+}
+
+/* Hamburger menu animation */
+
+#icon.active .hamburger {
+  background-color:rgba(0,0,0,0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+#icon.active .hamburger:before {
+  top: 0;
+  transform:rotate(45deg);
+  background-color:var(--ham-background-color-hover);
+}
+
+#icon.active .hamburger:after {
+  top: 0;
+  transform:rotate(135deg);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  background-color:var(--ham-background-color-hover);
+}
+
+/* Drawer */
+#drawer {
+  width: var(--drawer-width);
+  background-color: white;
+  margin-left:calc(var(--drawer-width) * -1);
+  transition: 0.3s transform ease-out;
+}
+
+#drawer.active {
+  transform:translateX(var(--drawer-width));
+}
+
+#drawer ul {
+  list-style-type:none;
+  position:absolute;
+  top:5%;
+  margin-top:50px;
+  font-size:50px;
+  font-family:'Helvetica',sans-serif;
+  text-transform:uppercase;
+}
+
+#drawer li a {
+  color:var(--anchor-text-color);
+  text-decoration:none;
+}
