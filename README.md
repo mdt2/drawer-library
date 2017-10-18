@@ -4,7 +4,7 @@
 ## Setup
 First make a div for the library to bind everything to. Give it an id of `drawer-holder`:
 
-```
+```html
 <html>
   <body>
     <div id="drawer-holder"></div>
@@ -14,7 +14,7 @@ First make a div for the library to bind everything to. Give it an id of `drawer
 
 Then link `drawer.css` and `drawer.js` to your HTML file:
 
-```
+```html
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="drawer-library/drawer.css">
@@ -26,7 +26,7 @@ Then link `drawer.css` and `drawer.js` to your HTML file:
 
 Finally, call the drawer library:
 
-```
+```javascript
 //The addListItems function expects an array of objects to generate list items
 //Content is your list title, href is where it points to
 
